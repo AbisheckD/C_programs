@@ -1,0 +1,72 @@
+#include<stdio.h>
+
+void smallest_num(int arr[], int size)
+{
+    int i,j,temp;
+    for(i=0; i<size-1; i++)
+    {
+        for(j=0; j<size-1; j++)
+        {
+            if(arr[j] > arr[j+1])
+            {
+                temp = arr[j];
+                arr[j] =arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    printf("%d is the smallest number\n",arr[0]);
+}
+
+void largest_num(int arr[], int size)
+{
+    int i,j,temp;
+    for(i=0; i<size-1; i++)
+    {
+        for(j=0; j<size-1; j++)
+        {
+            if(arr[j] > arr[j+1])
+            {
+                temp = arr[j];
+                arr[j] =arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    printf("%d is the largest number\n",arr[size-1]);
+}
+
+int main()
+{
+    int size, i;
+    printf("Enter the size of array\n");
+    scanf("%d",&size);
+    int arr[size];
+    printf("Enter the array elements:\n");
+    for(i=0; i<size; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+
+    largest_num(arr, size);
+    smallest_num(arr, size);
+    
+    return 0;
+}
+
+/*  OUTPUT
+Enter the size of array
+10
+Enter the array elements:
+1
+48
+84
+44
+88
+11
+73
+82
+91
+777
+777 is the largest number
+1 is the smallest number  */
