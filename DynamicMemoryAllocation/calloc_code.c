@@ -27,5 +27,8 @@ int main()
     {
         printf("%d ",ptr[i]);
     }
+
+    /* deallocating ptr */
+    free(ptr);
     return 0;
 }
