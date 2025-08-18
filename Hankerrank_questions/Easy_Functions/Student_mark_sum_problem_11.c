@@ -11,7 +11,7 @@ int marks_summation(int* marks, int number_of_students, char gender) {
   //Write your code here.
   
   int i,sum = 0;
-  if(gender == 98) //ascii value of b = 98 
+  if(gender == 'b') // Also if(gender == 98) can be used as ascii value of b = 98 
   {
     for(i = 0; i <= number_of_students; i+=2)
     {
