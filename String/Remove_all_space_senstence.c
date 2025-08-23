@@ -15,6 +15,7 @@ int main()
             {
                 str[k] = str[k+1];
             }
+            i--;
         }
     }
     printf("%s\n",str);
